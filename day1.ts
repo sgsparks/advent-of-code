@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 
 let day1 = ()=>{
-  let fileAsString = fs.readFileSync('day1input.txt').toString()
+  let fileAsString: string = fs.readFileSync('day1input.txt').toString()
 
 
   fileAsString = fileAsString.replace(/twone/g, "21");
@@ -22,7 +22,7 @@ let day1 = ()=>{
   fileAsString = fileAsString.replace(/eight/g, "8");
   fileAsString = fileAsString.replace(/nine/g, "9");
 
-  let fileAsArray = fileAsString.split("\n");
+  let fileAsArray: Array<string>  = fileAsString.split("\n");
   let answer: number = 0;
   let numberAsString: string = '';
 
@@ -45,7 +45,7 @@ let day1 = ()=>{
     answer+=Number(lineNumberAsString)
   })
 
-  return answer
+  console.log(answer)
 };
 
 day1()
