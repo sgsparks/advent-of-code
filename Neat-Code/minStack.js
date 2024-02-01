@@ -1,4 +1,4 @@
-var MinStack = function() {
+ bvar MinStack = function() {
   this.stack = []
   this.min = []
 };
